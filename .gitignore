@@ -1,0 +1,16 @@
+# Ignore build and compiled files
+*.out
+*.o
+*.class
+*.exe
+*.log
+*.tmp
+
+# Ignore temporary folders
+/bin/
+/build/
+/dist/
+/target/
+/obj/
+/.vscode/
+/.idea/
