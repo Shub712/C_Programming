@@ -1,0 +1,68 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Required Header Files
+//
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name - FindMax
+//  Description -   Function is use to find the maximum number.
+//  Input -         Interger
+//  Output-         Integer
+//  Author Name -   Shubham Kiran Pawar
+//  Date -          20/10/2025
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int FindMax(int iNo1, int iNo2)
+{
+    if(iNo1 < 0)
+    {
+        iNo1 = -iNo1;
+    }                                                                                   // Business Logic
+    if(iNo2 < 0)
+    {
+        iNo2 = -iNo2;
+    }
+
+    if(iNo1 < iNo2)
+    {
+        return iNo2;
+    }
+    else
+    {
+        return iNo1;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point of main function
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue1, iValue2 = 0;
+    int iRet=0;
+
+    printf("Enter two numbers\n");
+    scanf("%d %d", &iValue1, &iValue2);
+
+    iRet = FindMax(iValue1, iValue2);
+    printf("The maximum number is: %d", iRet);
+
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+//  Test Cases
+// 
+//  Input 1 = 20      Input 2 = 18       Output = The maximum number is 20
+//  Input 1 = -56     Input 2 = -20      Output = The maximum number is -56
+//  Input 1 = 0       Input 2 = 18       Output = The maximum number is 18
+//
+//////////////////////////////////////////////////////////////////////////////////////
