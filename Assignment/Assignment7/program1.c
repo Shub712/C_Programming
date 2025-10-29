@@ -1,0 +1,63 @@
+//////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+//////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+//////////////////////////////////////////////////////////////
+//
+//  Function Name = Pattern
+//  Description = It is use to print "$ *"
+//  Input =  Integer
+//  Output = Special Symbols
+//  Author = Shubham Kiran Pawar
+//  Date = 28/10/2025
+//////////////////////////////////////////////////////////////
+
+void Pattern(int iNo)
+{
+    if(iNo<0)
+    {
+        iNo = -iNo;
+    }
+    int iCnt = 0;
+    for (iCnt = 1; iCnt<=iNo; iCnt++)
+    {
+        printf("$\t*");                                    // Business Logic
+    }
+    
+    printf("\n");
+}
+
+// Time Complexity - O(N)
+
+//////////////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+//////////////////////////////////////////////////////////////
+
+int main()
+{
+
+    int iValue = 0;
+    printf("Enter the number \n");
+    scanf("%d", &iValue);
+
+    Pattern(iValue);
+
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////
+//
+//  Test Cases
+//  
+//  Input -  5     Output - * $ * $ * $ * $ * $
+//  Input -  2     Output - * $ * $ 
+//  Input - -3     Output - * $ * $ * $ 
+//  
+//
+//////////////////////////////////////////////////////////////

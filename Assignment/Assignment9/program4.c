@@ -1,0 +1,75 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name = OddFactorial
+//  Description = It is use to find Odd factorial of a given number
+//  Input =  Integer
+//  Output = Integer
+//  Author = Shubham Kiran Pawar
+//  Date = 29/10/2025
+//
+///////////////////////////////////////////////////////////////////////////////
+
+int OddFactorial(int iNo)
+{
+    if(iNo<0)
+    {
+        iNo = -iNo;
+    }
+
+    int iFact = 0; int iCnt = 0;
+
+    iFact = 1;
+
+    for(iCnt = 1; iCnt<=iNo; iCnt++)                                         // Business logic
+    {
+        if(iCnt % 2 != 0)
+        {
+           iFact = iFact * iCnt; 
+        }
+    }
+
+    return iFact;
+}
+
+//  Time Complexity - O(N)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+////////////////////////////////////////////////////////////////////////////
+
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter The number : \n");
+    scanf("%d", &iValue);
+
+    iRet = OddFactorial(iValue);
+
+    printf("The Odd factorial of number is : %d", iRet);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Test Cases
+//  
+//  Input -  10      Output - 945
+//  Input -  5       Output - 15
+//  Input - -5       Output - 15
+//  
+//
+////////////////////////////////////////////////////////////////////////////

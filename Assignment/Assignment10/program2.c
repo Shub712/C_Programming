@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name = RectArea
+//  Description = It is use to calculate area of a rectangle
+//  Input =  Float, float
+//  Output = Double
+//  Author = Shubham Kiran Pawar
+//  Date = 29/10/2025
+//
+///////////////////////////////////////////////////////////////////////////////
+
+double RectArea(float Width, float Height)
+{
+    double dAns = 0.0;
+
+    dAns = Width * Height;                                                  // Business Logic
+
+    return dAns;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+////////////////////////////////////////////////////////////////////////////
+
+
+int main()
+{
+    float fValue1 = 0.0f; float fValue2 = 0.0f;
+    double dRet = 0.0;
+
+    printf("Enter Width: \n");
+    scanf("%f", &fValue1);
+
+    printf("Enter Height: \n");
+    scanf("%f", &fValue2);
+
+    dRet = RectArea(fValue1,fValue2);
+
+    printf("The Area Of Rectangle is : %lf", dRet);
+
+    
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Test Cases
+//  
+//  Input1 -  5.3       Input1 -  9.78     Output - 51.834000
+//  Input1 -  4.2       Input1 -  6.2      Output - 26.039997
+//  Input1 -  2.2       Input1 -  4.5      Output - 9.000000
+//  
+//
+////////////////////////////////////////////////////////////////////////////

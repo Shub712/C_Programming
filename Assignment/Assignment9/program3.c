@@ -1,0 +1,70 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name = EvenFactorial
+//  Description = It is use to find even factorial of a given number
+//  Input =  Integer
+//  Output = Integer
+//  Author = Shubham Kiran Pawar
+//  Date = 29/10/2025
+//
+///////////////////////////////////////////////////////////////////////////////
+
+int EvenFactorial(int iNo)
+{
+    int iFact = 0; int iCnt = 0;
+
+    iFact = 1;
+
+    for(iCnt = 1; iCnt<=iNo; iCnt++)                                         // Business logic
+    {
+        if(iCnt % 2 == 0)
+        {
+           iFact = iFact * iCnt; 
+        }
+    }
+
+    return iFact;
+}
+
+//  Time Complexity - O(N)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+////////////////////////////////////////////////////////////////////////////
+
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter The number : \n");
+    scanf("%d", &iValue);
+
+    iRet = EvenFactorial(iValue);
+
+    printf("The Even factorial of number is : %d", iRet);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Test Cases
+//  
+//  Input -  10      Output - 3840
+//  Input -  5       Output - 8
+//  Input -  6       Output - 48
+//  
+//
+////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,72 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name = Display
+//  Description = It is use to print the pattern
+//  Input =  Integer
+//  Output = Special Symbol
+//  Author = Shubham Kiran Pawar
+//  Date = 29/10/2025
+//
+///////////////////////////////////////////////////////////////////////////////
+
+void Display(int iNo)
+{
+    int iCnt = 0;
+
+    if (iNo<0)
+    {
+        iNo = -iNo;
+    }
+
+    for(iCnt=1; iCnt<=iNo; iCnt++)                                      // Business Logic
+    {
+        printf("*\t");     
+    }
+
+    for(iCnt=1; iCnt<=iNo; iCnt++)
+    {
+        printf("#\t");     
+    }
+
+    
+}
+
+//  Time Complexity - O(2n)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+////////////////////////////////////////////////////////////////////////////
+
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter the number : \n");
+    scanf("%d", &iValue);
+
+    Display (iValue);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Test Cases
+//  
+//  Input -  4      Output -   *    *   *   *   #   #   #   #		
+//  Input -  3      Output -   *    *   *   #   #   #
+//  Input - -2      Output -   *    *   #   #
+//  
+//
+////////////////////////////////////////////////////////////////////////////
