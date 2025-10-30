@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name = SumOfFactors
+//  Description = It is use to display the sum of the factors.
+//  Input =   Integer
+//  Output =  Integer
+//  Author = Shubham Kiran Pawar
+//  Date = 29/10/2025
+//
+///////////////////////////////////////////////////////////////////////////////
+
+int SumOfFactors(int iNo)
+{
+    int iSum = 0;
+    int iCnt = 0;
+
+    for(iCnt=1; iCnt<=iNo; iCnt++)
+    {
+        if(iNo % iCnt == 0)
+        {
+            iSum = iSum + iCnt;                                             // Business Logic
+        }
+    }
+    return iSum;
+}
+
+// Time Complexity - O(n)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0, iRet = 0;
+
+    printf("Enter Number :\n");
+    scanf("%d", &iValue);
+
+    iRet = SumOfFactors(iValue);
+
+    printf("The Sum of Factors is : %d \n", iRet);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Test Cases
+//  
+//  Input1 -   12        Output - The Sum of Factors is 28	
+//  Input1 -   10        Output - The Sum of Factors is 18	
+//  Input1 -   6     I   Output - The Sum of Factors is 12	    
+//
+////////////////////////////////////////////////////////////////////////////
