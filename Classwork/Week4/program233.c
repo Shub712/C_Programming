@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+void CountDigits(char str[])
+{
+    int iCount = 0;
+
+    while(*str != '\0')
+    {
+        if((*str >= '0') && (*str <= '9')) 
+        {
+            iCount++;
+        }
+      
+        str++;
+    }
+    
+    printf("Capital Digits are : %d\n", iCount);
+
+}
+
+int main()
+{
+    char Arr[50] = {'\0'};
+
+    printf("Enter String : \n");
+    scanf("%[^'\n']s",Arr);
+
+    //fflush(stdin);                  
+
+    CountDigits(Arr);
+
+    return 0;
+}
