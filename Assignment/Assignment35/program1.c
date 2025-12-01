@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountCapital
+//  Description :   Used to count the capital characters
+//  Input   :       String
+//  Output  :       Integer(To display on console)
+//  Author  :       Shubham Kiran Pawar
+//  Date    :      1/12/2025
+//
+///////////////////////////////////////////////////////////////////////
+
+int CountCapital(char *str)
+{
+    int iCnt = 0, iCount = 0;
+
+    while (*str!='\0')
+    {
+        if(*str >= 'A' && *str<='Z')
+        { 
+            iCount++;
+        }
+        str++;
+    }
+    return iCount;    
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Enrty point function of a application
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[20]={'\0'};
+    int iRet = 0;
+
+    printf("Enter The String :\n");
+    scanf("%[^'\n']s", Arr);
+
+    iRet = CountCapital(Arr);
+
+    printf("Capital Characters are : %d\n",iRet);
+
+    return 0;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//  
+//  Test Cases  :
+//  
+//  Input :  SHUBHAM      Ouput : Capital characters are : 7
+//  Input :  shubham      Ouput : Capital characters are : 0	
+// 
+//
+//////////////////////////////////////////////////////////////////////////////////

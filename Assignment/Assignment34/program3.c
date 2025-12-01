@@ -1,0 +1,70 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Display
+//  Description :   Used to display the range in reverse order
+//  Input   :       character
+//  Output  :       Alphabets(To display on console)
+//  Author  :       Shubham Kiran Pawar
+//  Date    :       29/11/2025
+//
+///////////////////////////////////////////////////////////////////////
+
+void Display(char ch)
+{
+  int iCnt = 0;
+
+  if(ch>='A' && ch<='Z')
+  {
+    for(iCnt = ch; iCnt<=90; iCnt++)
+    {
+        printf("%c\t",iCnt);
+    }
+
+    printf("\n");
+  }
+
+  else if(ch>='a' && ch<='z')
+  {
+    for(iCnt = ch ; iCnt >= 97; iCnt--)
+    {
+        printf("%c\t",iCnt);
+    }
+    printf("\n");
+  }
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Enrty point function of a application
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = '\0';
+
+    printf("Enter The character : \n");
+    scanf("%c", &cValue);
+
+    Display(cValue);
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//  
+//  Test Cases  :
+//  
+//  Input1 : V      Ouput :  V	W	X	Y	Z
+//  Input :  d      Ouput :  d	c	b	a	
+//  Input :  %      Ouput : 
+//
+//////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,66 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Display
+//  Description :   Used to convert small letter to capital & capital to small
+//  Input   :       character
+//  Output  :       Character(To display on console)
+//  Author  :       Shubham Kiran Pawar
+//  Date    :       29/11/2025
+//
+///////////////////////////////////////////////////////////////////////
+
+void Display(char ch)
+{
+    if(ch>='a'&& ch<='z')
+    {
+        ch = ch - 32;
+        printf("%c\n", ch);
+    }
+    else if(ch>='A'&& ch<='Z')
+    {
+        ch = ch + 32;
+        printf("%c\n", ch);
+    }
+    else if(ch=='%')
+    {
+        ch = 37;
+        printf("%c\n", ch);
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Enrty point function of a application
+//
+////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = '\0';
+
+    printf("Enter The character : \n");
+    scanf("%c", &cValue);
+
+    Display(cValue);
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//  
+//  Test Cases  :
+//  
+//  Input1 : A      Ouput : "c"
+//  Input :  b      Ouput : "B"
+//  Input :  %      Ouput : "%"
+//
+//////////////////////////////////////////////////////////////////////////////////
