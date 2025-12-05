@@ -1,0 +1,71 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : StrCpyRev
+//  Description :   Used to cpoy the string in reverse order
+//  Input   :       String
+//  Output  :       String(To display on console)
+//  Author  :       Shubham Kiran Pawar
+//  Date    :       4/12/2025
+//
+///////////////////////////////////////////////////////////////////////
+
+void StrCpyRev(char *src, char *dest)
+{
+    char *start =  src;
+    char *end =  src;
+
+    char *temp = '\0';
+
+    while(*end != '\0')
+    {
+        end ++;
+    }
+
+    end--;
+
+    while(start <= end)
+    {
+        temp = *src;
+        *dest = *end;
+        *end = temp;
+
+        dest++;
+        end --;
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Enrty point function of a application
+//
+///////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[30] = "Marvellous Python";
+    char Brr[30] = {'\0'};
+
+    StrCpyRev(Arr,Brr);
+    printf("%s\n", Brr);  
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//  
+//  Test Cases  :
+// 
+//  Input1 :  Marverllous Python       Output : nohtyP suollevraM
+
+//
+// 
+//////////////////////////////////////////////////////////////////////////////////

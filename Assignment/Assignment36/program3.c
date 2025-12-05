@@ -1,0 +1,66 @@
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : StrlwrX
+//  Description :   Used to covert string into lower case, and lower to uppercase
+//  Input   :       String
+//  Output  :       String(To display on console)
+//  Author  :       Shubham Kiran Pawar
+//  Date    :       4/12/2025
+//
+///////////////////////////////////////////////////////////////////////
+
+void StrlwrToggleX(char *str)
+{
+    while(*str != '\0')
+    {
+        if(*str>= 'a' && *str <= 'z')
+        {
+            *str = *str - 32;
+        }
+        else if(*str>= 'A' && *str <= 'Z')
+        {
+            *str = *str + 32;
+        }
+        str++;
+    }
+  
+}
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Enrty point function of a application
+//
+///////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[20] = {'\0'};
+
+    printf("Enter The String : \n");
+    scanf("%[^ '\n']s", Arr);
+
+    StrlwrToggleX(Arr);
+
+    printf("The Updated String is : %s", Arr);
+
+    return 0;
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//  
+//  Test Cases  :
+// 
+//  Input :  sHubHam      Ouput : ShUBhAM
+//  Input :  Pawar        Ouput : pAWAR
+//
+// 
+//////////////////////////////////////////////////////////////////////////////////
