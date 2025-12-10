@@ -1,0 +1,54 @@
+//////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+//////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+//////////////////////////////////////////////////////
+//  Function name : Display
+//  Description :   used to display the pattern
+//  Input :         Integer
+//  Ouput :         Pattern
+//  Author :        Shubham Kiran Pawar
+//  Date :          10/12/2025
+//////////////////////////////////////////////////////
+
+void Display(int No)
+{
+    static int iCnt = 0;
+
+    if(iCnt < No)
+    {
+        printf("*\t");
+        iCnt++;
+        Display(No);
+    }
+    printf("\n");
+}
+
+//////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+//////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter The Number : \n");
+    scanf("%d", &iValue);
+    
+    Display(iValue);
+
+    return 0;
+}
+
+//////////////////////////////////////////////////////
+//  Test Cases: 
+//  
+//  Input : 5   Output : *  *   *   *   *
+//
+//////////////////////////////////////////////////////

@@ -1,0 +1,59 @@
+////////////////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////
+//  Function name : Sum
+//  Description :   used to display the sum of the digits
+//  Input :         Integer
+//  Ouput :         Integer(To display on the console)
+//  Author :        Shubham Kiran Pawar
+//  Date :          10/12/2025
+///////////////////////////////////////////////////////////////
+
+int Sum(int iNo)
+{
+    static int iCnt = 1, iAns = 0, temp = 0;
+
+    if(iCnt<=iNo)
+    {
+        temp = iNo % 10;
+        iAns = iAns + temp;
+        iCnt++;
+        iNo = iNo / 10;
+        Sum(iNo);
+    }
+    printf("\n");
+    return iAns;
+    
+}
+
+///////////////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+///////////////////////////////////////////////////////////////
+
+int main()
+{
+   int iValue = 0, iRet = 0;
+
+   printf("Enter The Number : \n");
+   scanf("%d", &iValue);
+
+   iRet = Sum(iValue);
+
+   printf("%d", iRet);
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////
+//  Test Cases: 
+//  
+//  Input : 879   Output : 24
+//
+//////////////////////////////////////////////////////////////

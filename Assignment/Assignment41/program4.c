@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////
+//  Function name : Fact
+//  Description :   used to display the factorial of a number
+//  Input :         Digit
+//  Ouput :         Integer(To display on the console)
+//  Author :        Shubham Kiran Pawar
+//  Date :          10/12/2025
+///////////////////////////////////////////////////////////////
+
+int Fact(int iNo)
+{
+    static int iCnt = 1, iFact= 1 ;
+
+    if(iCnt <= iNo)
+    {
+        iFact = iFact * iCnt;
+        iCnt++;
+        Fact(iNo);
+    }
+    return iFact;
+    
+}
+
+///////////////////////////////////////////////////////////////
+//
+//  Entry point function of a application
+//
+///////////////////////////////////////////////////////////////
+
+int main()
+{
+   int iValue = 0;
+   int iRet = 0;
+
+   printf("Enter The Number : \n");
+   scanf("%d", &iValue);
+
+   iRet = Fact(iValue);
+
+   printf("%d", iRet);
+
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////
+//  Test Cases: 
+//  
+//  Input : 5   Output : 120
+//
+//////////////////////////////////////////////////////////////
